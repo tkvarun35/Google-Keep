@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Sofia"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.30/angular-ui-router.min.js"></script>
+    <script src="./app.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body ng-app="app" style="background-color: #202124" ng-controller="mainCtrl">
+    <div class="container-fluid" type="navbar">
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark" width="100%">
+        <button
+          type="button"
+          class="btn btn-dark"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseWidthExample"
+          aria-expanded="false"
+          aria-controls="collapseWidthExample"
+          ng-hide="status"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a class="navbar-brand" ui-sef="" style="color: hsl(0, 0%, 100%)">
+          <img src="../dashboard/logo.png" width="30" height="30" alt="" />Keep
+        </a>
+        <div ng-model="status">
+          <a
+            ui-sref="login()"
+            style="color: rgb(230, 223, 223)"
+            ng-show="status"
+            >Login
+          </a>
+        </div>
+        <div ng-model="status" ng-controller="loginCtrl">
+          <a
+            class="btn-lg float-right"
+            ui-sref="logout()"
+            ng-click="logout()"
+            style="color: rgb(230, 223, 223)"
+            ng-hide="status"
+            >Logout
+          </a>
+        </div>
+        \
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav"></div>
+        </div>
+      </nav>
+      <div style="min-height: 120px">
+        <div class="collapse collapse-horizontal" id="collapseWidthExample">
+          <div class="card text-white bg-dark" style="width: 250px">
+            <button type="button" ui-sref="dashboard()" class="btn btn-dark">
+              Notes
+            </button>
+          </div>
+          <div class="card text-white bg-dark mb-3" style="width: 250px">
+            <button type="button" ui-sref="bin()" class="btn btn-dark">
+              Bin
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div ui-view></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

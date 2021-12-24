@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <div class="container"  style=" border-radius: 25px !important;">
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne" style="background-color: #202124">
+            <h2 class="mb-0" >
+              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
+                <form ><div class="form-row" >
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Title" style="background-color: #202124"  ng-model="title">
+                  </div></form>
+              </button>
+            </h2>
+          
+
+    <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body" style="background-color: #202124">
+        <form class="was-validated">
+          <div class="mb-3">
+            <label for="validationTextarea"></label>
+            <textarea
+              class="form-control is-valid"
+              id="validationTextarea"
+              placeholder="Add Notes"
+              required
+              ng-model="note"
+              style="background-color: #202124 ;"
+            ></textarea>
+            <div class="feedback">Please enter the notes here.</div>
+            <button
+              class="btn btn-dark"
+              type="submit"
+              ng-click="dashboard()"
+              
+            >
+              Add
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div></div><br>
+    </div> -->
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-4">
+        <div class="container" ng-repeat="note in data">
+          <div id="notes" class="row container-fluid">
+            <div
+              class="card text-white bg-dark mb-3"
+              style="
+                width: 23rem;
+                border-radius: 25px;
+                background-color: #202124;
+              "
+            >
+              <div class="card-header">{{note.title}}</div>
+              <div class="card-body">
+                <!-- <h5 class="card-title">S.key :-{{note.Serial_key}}</h5> -->
+                <p class="card-text">{{note.description}}</p>
+                <a ng-click="move(note.id)" class="card-link"
+                  ><i class="fas fa-trash" style="color: blanchedalmond"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

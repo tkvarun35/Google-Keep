@@ -1,0 +1,29 @@
+<div
+  class="container"
+  style="
+    position: absolute;
+
+    left: 0;
+    width: 120px;
+    transform: translateY(50%);
+  "
+></div>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-4">
+    <div class="col mb-4" ng-repeat="note in data">
+      <div
+        class="card text-white bg-secondary mb-3"
+        style="max-width: 18rem; border-radius: 25px"
+      >
+        <div class="card-header">{{note.title}}</div>
+        <div class="card-body">
+          <p class="card-text">{{note.description}}</p>
+          <a ng-click="rest(note.id)" class="card-link"
+            ><i class="fas fa-trash-restore" style="color: blanchedalmond"></i
+          ></a>
+          <a ng-click="" class="card-link"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
