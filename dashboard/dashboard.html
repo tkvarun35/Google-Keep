@@ -51,11 +51,12 @@
     </div>
     </div>
   </div></div><br>
-    </div> -->
+    </div>
+    <div gridster>
     <div class="container">
-      <div class="row row-cols-1 row-cols-md-4">
-        <div class="container" ng-repeat="note in data">
-          <div id="notes" class="row container-fluid">
+      <div class="row row-cols-2 row-cols-md-4">
+        <div class="container" gridster-item row="item.position[0]" col="item.position[1]" size-x="item.size.x" size-y="item.size.y" ng-repeat="note in data">
+          <div class="row container-fluid">
             <div
               class="card text-white bg-dark mb-3"
               style="
@@ -75,6 +76,7 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </body>
